@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>China Connect | Practical Cross-Cultural Guide for International Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefcf8;
+            color: #1e2a2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #c4452c;
+            --primary-dark: #a1321c;
+            --secondary: #2c6e4f;
+            --accent: #e9b35f;
+            --light-bg: #fff9ef;
+            --card-bg: #ffffff;
+            --border-light: #f0e4d0;
+            --shadow-sm: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .nav-bar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(4px);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+            padding: 1rem 1.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d3e40;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #c4452c, #e9b35f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #5b6e6f;
+            margin-top: 0.5rem;
+        }
+
+        .badge-group {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .badge {
+            background: #efe3d4;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #a1321c;
+        }
+
+        .section {
+            margin: 4rem 0;
+            scroll-margin-top: 90px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            border-left: 6px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.8rem;
+            color: #2c3e2b;
+        }
+
+        /* 两列布局 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .full-width-card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #f3ede5;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e2a2e;
+        }
+
+        .card h3 i {
+            color: var(--primary);
+        }
+
+        .tip-box {
+            background: #f9f3e8;
+            border-left: 4px solid var(--accent);
+            padding: 0.8rem 1rem;
+            border-radius: 18px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .phrase-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .phrase-item {
+            background: #f2ede4;
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .team-table {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+
+        .team-row-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            margin: 1rem 0;
+        }
+
+        .team-card {
+            background: #fef5e8;
+            border-radius: 20px;
+            padding: 0.8rem 1.2rem;
+            min-width: 170px;
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #2c3e2e;
+            color: #e9e3d5;
+            border-radius: 32px 32px 0 0;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fffef7;
+            max-width: 750px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 40px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.2s ease;
+        }
+
+        .modal-content .card {
+            cursor: default;
+            box-shadow: none;
+            padding: 0;
+            border: none;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #c4452c;
+            transition: 0.2s;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 750px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        .list-styled {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .list-styled li {
+            margin: 0.4rem 0;
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: var(--border-light);
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <div class="nav-links">
+        <a href="#communication">💬 Communication</a>
+        <a href="#transportation">🚇 Transport</a>
+        <a href="#healthy-eating">🥗 Healthy Eating</a>
+        <a href="#digital-life">📱 Digital Life</a>
+        <a href="#team-roles">👥 Team & Credits</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <h1>🇨🇳 China Connect</h1>
+        <div class="tagline">Your practical English guide for cross-cultural life — Communication · Transport · Healthy Cuisine · Digital Lifestyle</div>
+        <div class="badge-group">
+            <span class="badge">For international students</span>
+            <span class="badge">Based on Units 1,4,5,8</span>
+            <span class="badge">Webpage + 5-8 min intro video</span>
+        </div>
+    </div>
+
+    <!-- ==================== 沟通模块（4个卡片，两行两列） ==================== -->
+    <div class="section" id="communication">
+        <h2 class="section-title"><i class="fas fa-comments" style="margin-right: 12px;"></i> The Art of Communication</h2>
+        <div class="card-grid">
+            <!-- 图片1: 问候场景，建议图片内容：两个人握手或微笑交谈 -->
+            <div class="card">
+                <img class="card-img" src="images/communication-greeting.jpg" alt="Greeting between international student and Chinese local" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Greeting'">
+                <div class="card-content">
+                    <h3><i class="fas fa-hand-peace"></i> Greetings & Ice-breaking</h3>
+                    <div class="tip-box">💬 <strong>Dialogue script:</strong><br>“Hello, nice to meet you! I’m from [country] and I just arrived last week.”<br>“Welcome to China! Let me know if you need any help.”</div>
+                    <p>✨ Tip: Briefly share your purpose (study/exchange) to build rapport.</p>
+                </div>
+            </div>
+            <!-- 图片2: 求助场景，比如外国学生向路人问路 -->
+            <div class="card">
+                <img class="card-img" src="images/communication-asking-help.jpg" alt="Student asking for directions" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Asking+for+Help'">
+                <div class="card-content">
+                    <h3><i class="fas fa-question-circle"></i> Asking for Help</h3>
+                    <div class="tip-box">“Excuse me, sorry to bother you. I don't know how to ______. Could you help me?”<br>✅ Always say <strong>“Xiè xie (谢谢)”</strong> after being helped.</div>
+                </div>
+            </div>
+            <!-- 图片3: 点餐场景，外国学生在餐厅看菜单 -->
+            <div class="card">
+                <img class="card-img" src="images/communication-ordering.jpg" alt="Ordering food in a Chinese restaurant" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Ordering+Food'">
+                <div class="card-content">
+                    <h3><i class="fas fa-utensils"></i> Ordering Food</h3>
+                    <div class="tip-box">“It’s my first time here, could you recommend some classic dishes?”</div>
+                    <p><i class="fas fa-language"></i> Key phrase: <strong>Diǎn cān (点餐)</strong> – order food.</p>
+                </div>
+            </div>
+            <!-- 图片4: 社交禁忌示意，比如握手而不是拥抱 -->
+            <div class="card">
+                <img class="card-img" src="images/communication-taboos.jpg" alt="Proper handshake etiquette" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Social+Taboos'">
+                <div class="card-content">
+                    <h3><i class="fas fa-ban"></i> Social Taboos & Etiquette</h3>
+                    <ul class="list-styled">
+                        <li>❌ Avoid asking income, age, marital status, religious beliefs.</li>
+                        <li>🤝 Light handshake is enough – no hugging/cheek kissing generally.</li>
+                        <li>🙏 Never directly reject kindness; express gratitude first.</li>
+                        <li>🥢 Use serving chopsticks on formal occasions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="full-width-card">
+            <h3><i class="fas fa-language"></i> Common Chinese Phrases (pinyin + English)</h3>
+            <div class="phrase-grid">
+                <span class="phrase-item">Nǐ hǎo (你好) – Hello</span>
+                <span class="phrase-item">Xiè xie (谢谢) – Thank you</span>
+                <span class="phrase-item">Bù kèqi (不客气) – You're welcome</span>
+                <span class="phrase-item">Duìbuqǐ (对不起) – Sorry</span>
+                <span class="phrase-item">Dǎrǎo yīxià (打扰下) – Excuse me</span>
+                <span class="phrase-item">Zàijiàn (再见) – Goodbye</span>
+                <span class="phrase-item">Diǎn cān (点餐) – Order food</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 交通模块（5个卡片，自动两列） ==================== -->
+    <div class="section" id="transportation">
+        <h2 class="section-title"><i class="fas fa-bus-alt"></i> Smart Mobility & Transportation</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img class="card-img" src="images/transport-amap.jpg" alt="Amap navigation app on phone" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Amap'">
+                <div class="card-content"><h3><i class="fas fa-map-marked-alt"></i> Amap (高德地图)</h3><p>Search destination → routes with real-time traffic, cost estimates. English navigation, ride-hailing & ticket booking.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/transport-subway.jpg" alt="Subway station and train" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Subway'">
+                <div class="card-content"><h3><i class="fas fa-subway"></i> Subway (Metro)</h3><p>✅ Ticket vending machines (English) or Alipay Travel Code. Hours 6:00–23:00, avoid rush hours 7-9am & 5-7pm.<br>🔄 Free transfer at interchange stations.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/transport-bus.jpg" alt="City bus in China" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+City+Bus'">
+                <div class="card-content"><h3><i class="fas fa-bus"></i> City Buses</h3><p>💰 Cash (exact change) or Alipay/WeChat QR code. Bilingual stops, wave to signal driver. Sightseeing buses available.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/transport-didi.jpg" alt="Didi ride-hailing car" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Didi'">
+                <div class="card-content"><h3><i class="fas fa-car"></i> Didi (滴滴)</h3><p>Enter destination → choose "Express" for best value. ⚠️ Verify license plate before getting in. Night surcharge for remote suburbs.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/transport-highspeedrail.jpg" alt="High-speed train" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+High-speed+Rail'">
+                <div class="card-content"><h3><i class="fas fa-train"></i> High-Speed Rail</h3><p>Book via 12306 app (English, passport registration). Arrive 40 min early. Second-class best value, free hot water onboard.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 健康饮食模块（7个菜品+餐厅建议） ==================== -->
+    <div class="section" id="healthy-eating">
+        <h2 class="section-title"><i class="fas fa-apple-alt"></i> Healthy Eating: Nutritious Chinese Dishes</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img class="card-img" src="images/food-steamed-perch.jpg" alt="Steamed perch with ginger" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Steamed+Perch'">
+                <div class="card-content"><h3><i class="fas fa-fish"></i> Steamed Perch (清蒸鲈鱼)</h3><p>Cantonese classic – steamed with ginger & scallion. Tender, low fat, high-quality protein, easy to digest.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-kungpao.jpg" alt="Kung Pao chicken" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Kung+Pao+Chicken'">
+                <div class="card-content"><h3><i class="fas fa-drumstick-bite"></i> Kung Pao Chicken (宫保鸡丁)</h3><p>Famous Sichuan dish: diced chicken with peanuts, chili. Sweet, sour, salty, mildly spicy – foreigner-friendly.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-shrimp-eggs.jpg" alt="Shrimp with scrambled eggs" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Shrimp+Scrambled+Eggs'">
+                <div class="card-content"><h3><i class="fas fa-egg"></i> Shrimp with Scrambled Eggs (虾仁滑蛋)</h3><p>Mild flavor, fresh shrimp + fluffy eggs. Low fat, high protein, suitable for all ages.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-tomato-eggs.jpg" alt="Tomato scrambled eggs" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Tomato+Scrambled+Eggs'">
+                <div class="card-content"><h3><i class="fas fa-seedling"></i> Scrambled Eggs with Tomato (番茄炒蛋)</h3><p>China's iconic home dish. Tangy tomato + soft eggs, rich in lycopene & protein. Perfect with rice.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-hotpot.jpg" alt="Chinese hot pot" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Hot+Pot'">
+                <div class="card-content"><h3><i class="fas fa-hot-pot"></i> Hot Pot (火锅)</h3><p>Social dining: choose broth (spicy, bone, mushroom) and cook meat, veggies, tofu. Endless fun.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-sweet-sour-pork.jpg" alt="Sweet and sour pork" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Sweet+Sour+Pork'">
+                <div class="card-content"><h3><i class="fas fa-candy-cane"></i> Sweet & Sour Pork (糖醋里脊)</h3><p>Crispy pork strips in glossy sweet-sour sauce – loved worldwide, bright fruity flavor.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/food-mapo-tofu.jpg" alt="Mapo tofu" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Mapo+Tofu'">
+                <div class="card-content"><h3><i class="fas fa-pepper-hot"></i> Mapo Tofu (麻婆豆腐)</h3><p>Spicy Sichuan tofu with minced beef, numbing & aromatic. Light calories, budget-friendly, great with rice.</p></div>
+            </div>
+        </div>
+        <div class="full-width-card">
+            <h3><i class="fas fa-store"></i> Restaurant Selection & Dining Tips</h3>
+            <ul class="list-styled">
+                <li>📍 Open Amap “Secret Food Ranking” – popular local spots.</li>
+                <li>🗣️ Ask residents for authentic hidden gems.</li>
+                <li>👥 Choose crowded restaurants → fresh and tasty.</li>
+                <li>📝 Read diners' reviews & real dish photos before ordering.</li>
+                <li>🏬 Chain restaurants guarantee hygiene & consistent quality – ideal for newcomers.</li>
+                <li>⚠️ Avoid unlicensed street stalls if you have a sensitive stomach.</li>
+                <li>🍜 Traditional snack streets → sample multiple local bites in one place.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==================== 数字生活模块 ==================== -->
+    <div class="section" id="digital-life">
+        <h2 class="section-title"><i class="fas fa-mobile-alt"></i> Life in the Digital Age: Essential Apps</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img class="card-img" src="images/app-wechat.jpg" alt="WeChat interface" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+WeChat'">
+                <div class="card-content"><h3><i class="fab fa-weixin"></i> WeChat</h3><p>Bind intl credit card → pay everywhere. Mini-programs for taxi, food delivery, translation. 🔐 Enable 2FA, avoid unknown links/red envelopes.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/app-alipay.jpg" alt="Alipay payment screen" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Alipay'">
+                <div class="card-content"><h3><i class="fab fa-alipay"></i> Alipay</h3><p>Visa/Mastercard binding, travel code, currency converter. 🔐 Avoid public Wi-Fi for large payments, activate account insurance.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/app-amap.jpg" alt="Amap navigation map" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Amap'">
+                <div class="card-content"><h3><i class="fas fa-map"></i> Amap</h3><p>English navigation, real-time traffic, ride-hailing. Share live location with friends for safety.</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/app-meituan.jpg" alt="Meituan food delivery" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Meituan'">
+                <div class="card-content"><h3><i class="fas fa-motorcycle"></i> Meituan</h3><p>Food delivery, groceries, medicine. English address input. Inspect delivery & protect privacy (use building address only).</p></div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="images/app-translate.jpg" alt="Google Translate on mobile" onerror="this.src='https://placehold.co/800x500?text=Add+Image:+Google+Translate'">
+                <div class="card-content"><h3><i class="fas fa-language"></i> Google Translate</h3><p>Voice & camera translation, offline Chinese pack. Never upload passport/bank info for privacy.</p></div>
+            </div>
+        </div>
+        <div class="full-width-card" style="background:#eef3ea;"><i class="fas fa-shield-alt"></i> <strong>General digital safety:</strong> Download apps from official stores, enable transaction alerts, never share SMS verification codes. Freeze payment apps immediately if phone lost.</div>
+    </div>
+
+    <!-- ==================== 小组分工与项目信息 ==================== -->
+    <div class="section" id="team-roles">
+        <h2 class="section-title"><i class="fas fa-users"></i> Team Collaboration & Credits</h2>
+        <div class="team-table">
+            <h3 style="margin-bottom: 1rem;">🎯 Project 1: Digital Guide to Cross-Cultural Life</h3>
+            <div class="team-row-flex">
+                <div class="team-card"><strong>🗣️ Communication Specialist</strong><br>闫方涛<br><span style="font-size:0.8rem;">Ice-breaking scripts, taboos, phrases</span></div>
+                <div class="team-card"><strong>🚗 Transportation Guide</strong><br>张国豪<br><span style="font-size:0.8rem;">Public transport, Didi, high-speed rail</span></div>
+                <div class="team-card"><strong>🥗 Healthy Eating Advisor</strong><br>许哲<br><span style="font-size:0.8rem;">Dishes, restaurant tips, nutrition</span></div>
+                <div class="team-card"><strong>📱 Digital Life Navigator</strong><br>孙天睿<br><span style="font-size:0.8rem;">Essential apps & safety precautions</span></div>
+                <div class="team-card"><strong>🎬 Project Coordinator</strong><br>王欣越<br><span style="font-size:0.8rem;">Timeline, integration, webpage & video</span></div>
+            </div>
+            <hr>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; margin: 1rem 0;">
+                <div><i class="fas fa-database"></i> <strong>Content integration & research:</strong> 孙天睿</div>
+                <div><i class="fas fa-code"></i> <strong>Webpage development & design:</strong> 王欣越</div>
+                <div><i class="fas fa-video"></i> <strong>Introduction video presenters:</strong> 闫方涛, 张国豪, 许哲 <span style="font-size:0.85rem;">(all members except 王欣越 & 孙天睿)</span></div>
+            </div>
+            <p style="margin-top: 1.2rem; background: #faf0e0; padding: 1rem; border-radius: 20px;"><i class="fas fa-globe"></i> <strong>Final products:</strong> This English webpage + a 5-8 min introduction video (highlighting cross-cultural tips). All content covers Units 1,4,5,8 and is designed to help international students adapt quickly to life in China.</p>
+        </div>
+    </div>
+
+    <div class="full-width-card" style="background: #fff3e6; text-align: center;">
+        <i class="fas fa-lightbulb" style="font-size: 2rem; color: #e9b35f;"></i>
+        <h3>🌏 Cross-Cultural Wisdom</h3>
+        <p>✨ Learn basic pinyin – locals will appreciate your effort. ✨ Use translation apps wisely. ✨ Respect “face” culture; polite indirectness works. ✨ Stay open-minded and enjoy China’s efficient digital lifestyle!</p>
+    </div>
+
+    <div class="footer">
+        <p><i class="far fa-copyright"></i> 2026 English Group Project – Intermediate II · Digital Guide to Cross-Cultural Life</p>
+        <p>Team members: 闫方涛, 张国豪, 许哲, 孙天睿, 王欣越 | Supervised by English Department</p>
+        <p style="margin-top: 0.5rem;">📅 Final Deadline: Week 14 (June 1-7) | Webpage + Introduction Video</p>
+    </div>
+</div>
+
+<!-- Modal for enlarged card view -->
+<div id="cardModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-body-container"></div>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+    const modal = document.getElementById('cardModal');
+    const modalBody = document.getElementById('modal-body-container');
+    const closeSpan = document.querySelector('.close-modal');
+
+    function openModal(contentHTML) {
+        modalBody.innerHTML = `<div class="card" style="cursor: default; padding: 0; box-shadow: none; border: none;">${contentHTML}</div>`;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        modalBody.innerHTML = '';
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const cloneCard = card.cloneNode(true);
+            cloneCard.style.cursor = 'default';
+            const innerHtml = cloneCard.outerHTML;
+            openModal(innerHtml);
+        });
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    closeSpan.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+</script>
+</body>
+</html>
